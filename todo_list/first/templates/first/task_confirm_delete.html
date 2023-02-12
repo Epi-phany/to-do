@@ -1,0 +1,10 @@
+{% extends 'first/base.html' %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <legend class="border-bottom mb-4">Delete Task</legend>
+    <p>Do You Want To Delete Task?"{{task}}"</p>
+    <button class="btn btn-outline-danger" type="submit">Delete</button>
+    <a class="btn btn-outline-secondary" href="{% url 'home' %}">NO</a>
+</form>
+{% endblock %}
